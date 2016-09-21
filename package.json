@@ -1,0 +1,23 @@
+{
+  "name": "funapp",
+  "version": "1.0.0",
+  "description": "angular app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmarlett93/funApp.git"
+  },
+  "author": "John Marlett",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jmarlett93/funApp/issues"
+  },
+  "homepage": "https://github.com/jmarlett93/funApp#readme",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "express": "^4.14.0"
+  }
+}
