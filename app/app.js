@@ -15,6 +15,6 @@ angular.module('myOdysseyApp', [ 'ngComponentRouter', 'home'])
     '   </nav>\n' +
     '   <ng-outlet></ng-outlet>\n',
     $routeConfig: [
-        {path: '/home/...', name: 'home', component: 'home'},
+        {path: '/home/...', name: 'Home', component: 'home'},
     ]
 });
