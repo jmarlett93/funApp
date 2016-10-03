@@ -1,7 +1,6 @@
 'use strict'
 
-angular.module('myOdysseyApp', [ 'ui.router'])
-
+angular.module('myOdysseyApp', [ 'ui.router', 'myOdysseyControllers', 'myOdysseyServices'])
 
 .config(function($stateProvider){
     

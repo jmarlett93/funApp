@@ -1,0 +1,68 @@
+/**
+Title:  Css for MyOdysseyApp
+Author: John Marlett
+Date started: 10/3/2016
+**/
+
+html, body, div, span, applet, object, iframe, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, label, legend, main, p, blockquote, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  display: block; }
+
+html{
+  width:100%;
+  background-color: #FED3A8;
+  font-size: 16px; }
+  
+img {
+    object-fit:contain;
+    width:100%; }
+
+section { height:auto; }
+
+header{
+    
+}
+  
+body {
+    height:100%;
+    font-family:  'Times New Roman', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: transparent; }
+
+a { color:#000000;
+    text-decoration: none; }
+    
+.app-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: stretch;
+}
+
+.app-header h1{
+    margin: auto;
+    color: #ffffff; }
+
+.horizontal-flex{
+    margin-top: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: stretch;
+}
+
+.nav-view{
+    margin: auto;
+    padding: 0.5em;
+    background-color: #FA8242;
+    border-radius: 0.35em;
+    width: 25%;
+    color: #ffffff;
+    font-size: 1.5em;
+    text-align: center;
+}

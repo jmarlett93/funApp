@@ -7,17 +7,19 @@
     <script src="../node_modules/angular/angular.js"></script>
     <script src="../node_modules/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="app.js"></script>
-
+    <script src="controllers.js"></script>
+    <script src="services.js"></script>
+    <link href="css/style.css" rel="stylesheet">
 
   </head>
   <body ng-app="myOdysseyApp">
-      <header>
+      <header class="app-header">
         <h1>The Odyssey App</h1>
-        <a ui-sref="home">home</a>
-        <a ui-sref="about">about</a>
-      <p>Hi puke</p>
+        <div class="horizontal-flex">
+            <a class="nav-view" ui-sref="home">Home</a>
+            <a class="nav-view" ui-sref="about">About</a>
+        </div>
       <ui-view></ui-view>
-      
   </body>
 </html>
    
