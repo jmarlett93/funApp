@@ -1,33 +1,25 @@
 'use strict'
 
-angular.module('myOdysseyApp', [ 'ui.router', 'home'])
+angular.module('myOdysseyApp', [ 'ui.router'])
 
 
-.config(['$stateProvider', '$urlRouterProvider',
+.config(function($stateProvider){
     
     $stateProvider
-        .state('app', {
-            url: '/menu',
-            abstract: true,
-            templateUrl: 'menu/menu.html'
-        })
-        
-        .state('menu.home', {
+        .state('home', {
             url: '/home',
-            views: {
-                templateUrl:'home/home.html',
-                controller: 'homeCtrl'
-            }
-        })
-        })
+            templateUrl: 'home/home.html',
+            controller: "homeController",
+            controllerAs: "homeCtrl",
+            })
             
+         .state('about', {
+             url: '/about',
+             templateUrl: 'about/about.html',
+             controller: "aboutController",
+             controllerAs: "aboutCtrl",
+         })
+     })
 
-.component('myOdysseyApp', {
-    template: '<nav>\n' +
-    '   <a ng-link="[\'home\']">Home</a>\n' +
-    '   <a ng-link="[\'john\']">John</a>\n' +
-    '   </nav>\n' +
-    '   <ng-outlet></ng-outlet>\n',
-   
-})
+
 
