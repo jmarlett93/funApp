@@ -8,15 +8,21 @@ angular.module('myOdysseyApp', [ 'ui.router', 'myOdysseyControllers', 'myOdyssey
         .state('home', {
             url: '/home',
             templateUrl: 'home/home.html',
-            controller: "homeController",
-            controllerAs: "homeCtrl",
+            controller: 'homeController',
+            controllerAs: 'homeCtrl'
             })
             
          .state('about', {
              url: '/about',
              templateUrl: 'about/about.html',
-             controller: "aboutController",
-             controllerAs: "aboutCtrl",
+             controller: 'aboutController',
+             controllerAs: 'aboutCtrl'
+         })
+         .state('game', {
+             url:'/game',
+             templateUrl: 'game/game.html',
+             controller: 'gameController',
+             controllerAs: 'gameCtrl'
          })
      })
 

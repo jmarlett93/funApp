@@ -37,6 +37,10 @@ body {
 a { color:#000000;
     text-decoration: none; }
     
+h1, h2 {
+    text-align: center;
+}
+    
 .app-header{
     display: flex;
     flex-direction: column;
@@ -47,6 +51,19 @@ a { color:#000000;
 .app-header h1{
     margin: auto;
     color: #ffffff; }
+    
+.vertical-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: stretch; }
+
+.standard {
+    height: 32.33%; }
+    
+.vertical-flex h2, .vertical-flex p {
+    margin: auto 0.75em;
+}
 
 .horizontal-flex{
     margin-top: 1em;

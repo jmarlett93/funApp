@@ -8,4 +8,10 @@ angular.module('myOdysseyControllers', [])
 
 .controller('aboutController', function($scope){
     
-});
+})
+
+.controller('gameController', function($scope, heroBuilderService){
+   
+   $scope.hero = heroBuilderService.hero.name;
+    
+})
