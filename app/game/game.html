@@ -1,13 +1,16 @@
-<section class="vertical-flex standard">
+<section class="vertical-flex">
 
-<h2>Game</h2>
+    <div class="text-container">
+        <h2></h2>
 
-<p>Step One: Get to know your hero</p>
+        <a class="nav-view" ui-sref="game"> go</a>
+    </div>
 
-<p>Your hero is {{hero}}.  While {{hero}} is not the strongest, he is fast
-    and cunning.
-</p>
-
-<a class="nav-view" ui-sref="game"> Get Started</a>
-
+    <div class="statistic-container horizontal-flex">
+        <div ng-repeat="(key, value) in heroStats" class="stat-display">
+            {{value}}
+            <h3>{{key}}</h3>   
+            </div>
+         
+    </div>
 </section>

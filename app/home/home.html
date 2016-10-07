@@ -1,32 +1,31 @@
-<section class="vertical-flex standard">
+<section class="vertical-flex">
     
     <div class="nav-descriptor">
-        <h2>Intro</h2>
-
-        <p>In Odyssey App, you guide your hero through an adventure.</p>
-
-        <p> Make good decisions to navigate your hero safely home</p>
-
-        <p>Watch your <b>health,</b> <b>resolve,</b> <b>arete,</b> and <b>men</b> displayed at
-        the bottom of the screen. If you are running low on
-        any of these resources choose carefully to survive.</p>
+        <h2 ng-click="showIntro = true; showResolve = false; showHealth = false; showArete = false" ng-init="showIntro = true">Intro</h2>
+        <p ng-show="showIntro">Welcome to the Odyssey App. While navigating Odysseus homeward, watch your resources displayed at
+        the bottom of the screen. If you are running low choose carefully to survive.</p>
     </div>
 
     <div class="text-container">
-        <h2 ng-click="showActiveElem('showHealth')">Health</h2>
+        <h2 ng-click="showIntro = false; showResolve = false ; showHealth = true  ; showArete = false; showMen = false">Health</h2>
         <p ng-show="showHealth">{{healthMessage}}</p>
     </div>
 
     <div class="text-container">
-        <h2 ng-click="showResolve = true ; showHealth = false  ; showArete = false">Resolve</h2>
+        <h2 ng-click="showIntro = false; showResolve = true ; showHealth = false  ; showArete = false; showMen = false ">Resolve</h2>
         <p ng-show="showResolve">{{resolveMessage}}</p>
     </div>
 
     <div class="text-container">
-        <h2 ng-click="showArete = true ; showHealth = false ; showResolve = false">Arete</h2>
+        <h2 ng-click="showIntro = false; showArete = true ; showHealth = false ; showResolve = false; showMen = false">Arete</h2>
         <p ng-show="showArete">{{areteMessage}}</p>
     </div>
-    <a class="nav-view" ui-sref="game"> Get Started</a>
+    
+        <div class="text-container">
+        <h2 ng-click="showIntro = false; showArete = false ; showHealth = false ; showResolve = false; showMen = true">Men</h2>
+        <p ng-show="showMen">{{menMessage}}</p>
+    </div>
+    <a class="nav-view" ui-sref="game"> Play</a>
 
 </section>
 

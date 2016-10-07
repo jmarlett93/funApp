@@ -15,8 +15,7 @@ html, body, div, span, applet, object, iframe, a, abbr, acronym, address, big, c
   display: block; }
 
 html{
-  width:100%;
-  background-color: #FED3A8;
+  background-color: #EEE1D7;
   font-size: 16px; }
   
 img {
@@ -34,6 +33,11 @@ body {
     font-family: Arial, sans-serif;
     background-color: transparent; }
 
+.spacer {
+    height: 60%;
+    width: 100%;
+    display: block; }
+
 a { color:#000000;
     text-decoration: none; }
     
@@ -43,29 +47,29 @@ h1, h2 {
 .app-header{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-content: stretch;
+    justify-content: flex-start;
+    align-content: flex-start;
 }
 
 .app-header h1{
-    margin: auto;
+    margin: 0.25em auto;
     color: #ffffff; }
     
 .vertical-flex{
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: stretch; }
 
 .standard {
-    height: 32.33%; }
+    height: 22.33%; }
     
 .vertical-flex h2, .vertical-flex p {
     margin: auto 0.75em;
 }
 
 .horizontal-flex{
-    margin-top: 1em;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -73,13 +77,13 @@ h1, h2 {
 }
 
 .nav-view{
-    margin: 1em auto auto auto;
+    margin: 0.25em auto auto auto;
     padding: 0.5em;
     background-color: #C04F1F;
     border-radius: 0.35em;
     width: 35%;
     color: #ffffff;
-    font-size: 1.5em;
+    font-size: 1.3em;
     text-align: center; }
 
 .nav-descriptor{
@@ -88,23 +92,49 @@ h1, h2 {
     background-color: #C04F1F;
     color: #ffffff;
     border-radius: 0.35em;
-    padding: 0.5em; }
+    padding: 0.5em;
+    text-align: center; }
+
+.nav-descriptor h2 {
+    font-size: 1.3em; }
+    
+.nav-descriptor p {
+    font-size: 1em; }
 
 .text-container{
-    margin: 1em auto 0 auto;
+    margin: 0.25em auto 0 auto;
     width: 90%;
     padding: 0.5em;
     color: #ffffff;
     background-color: #FA8242;
-    border-radius: 0.35em; }
+    border-radius: 0.35em;
+    text-align: center; }
     
 .text-container > h2 {
-    font-size: 1.5em;       }
+    font-size: 1.3em;       }
 
 .text-container > p {
-    font-size: 1.2em;
+    font-size: 1em;
     padding: 0.5em;
     border-top: 1px solid #ffffff; }
+    
+.statistic-container {
+    margin: 1em auto 0 auto;
+    width: 90%;
+    padding: 0.5em;
+    border-radius: 0.35em;
+    color: #ffffff;
+    background-color: #C04F1F; }
+    
+.stat-display {
+    margin: auto;
+    padding: 0.25em;
+    width: 21%;
+    height: 2.4em;
+    background-color: #EEE1D7;
+    color:#C04F1F;
+    border-radius: 0.35em;
+    text-align: center; }
 
 .expand-button {
     
