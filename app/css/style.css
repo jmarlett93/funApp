@@ -31,15 +31,14 @@ header{
   
 body {
     height:100%;
-    font-family:  'Times New Roman', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: Arial, sans-serif;
     background-color: transparent; }
 
 a { color:#000000;
     text-decoration: none; }
     
 h1, h2 {
-    text-align: center;
-}
+    text-align: center; }
     
 .app-header{
     display: flex;
@@ -74,12 +73,39 @@ h1, h2 {
 }
 
 .nav-view{
-    margin: auto;
+    margin: 1em auto auto auto;
     padding: 0.5em;
-    background-color: #FA8242;
+    background-color: #C04F1F;
     border-radius: 0.35em;
-    width: 25%;
+    width: 35%;
     color: #ffffff;
     font-size: 1.5em;
-    text-align: center;
+    text-align: center; }
+
+.nav-descriptor{
+    margin: 1em auto 0 auto;
+    width: 90%;
+    background-color: #C04F1F;
+    color: #ffffff;
+    border-radius: 0.35em;
+    padding: 0.5em; }
+
+.text-container{
+    margin: 1em auto 0 auto;
+    width: 90%;
+    padding: 0.5em;
+    color: #ffffff;
+    background-color: #FA8242;
+    border-radius: 0.35em; }
+    
+.text-container > h2 {
+    font-size: 1.5em;       }
+
+.text-container > p {
+    font-size: 1.2em;
+    padding: 0.5em;
+    border-top: 1px solid #ffffff; }
+
+.expand-button {
+    
 }
