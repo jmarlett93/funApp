@@ -7,6 +7,7 @@ angular.module('myOdysseyControllers', [])
     $scope.resolveMessage = rulesMessagesService.rules[1];
     $scope.areteMessage = rulesMessagesService.rules[2];
     $scope.menMessage = rulesMessagesService.rules[3];
+    $scope.updateMessages = rulesMessagesService.updateActiveElem;
 })
 
 .controller('aboutController', function($scope){
@@ -14,7 +15,6 @@ angular.module('myOdysseyControllers', [])
 })
 
 .controller('gameController', function($scope, heroBuilderService){
-   
    $scope.heroStats = heroBuilderService.hero;
    
 })

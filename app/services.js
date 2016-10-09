@@ -29,12 +29,25 @@ angular.module('myOdysseyServices', [])
                     " the respect of the Hellenic world.",
                     "Some brawn always helps. You don't need them but keep them around."
                   ];
-    
-            let responsiveElems = [ "showIntro", "showHealth", "showResolve", "showArete"];
-
-                  
+     
+     let responsiveElems = { 
+         "showIntro": true, 
+         "showHealth": false,
+         "showResolve": false,
+         "showArete": false, }
+         
+     function updateActiveElem(activeString){
+        let keysArr = Object.keys(responsiveElems);
+        
+        keysArr.forEach(function(elem){
+                
+            
+        })
+     }
+                     
    return {
        rules: rules,
-   }
+       responsiveElems: responsiveElems,
+       updateActiveElem: updateActiveElem }
 })
 
