@@ -3,37 +3,40 @@
          
          let responsiveElems = { 
          "showIntro": true, 
-         "showHealth": false,
-         "showResolve": false,
-         "showArete": false }
+         "showHealth": true,
+         "showResolve": true,
+         "showArete": true,
+         "showMen": true }
          
         function updateElem(testString, arrayObj){
             let keysArr = Object.keys(arrayObj);
-                
-               //console.log(keysArr);
+            let operatorString = '';
                 
                 keysArr.forEach(function(elem){
+                    operatorString += elem;
                     if( elem === testString){
-                        console.log(arrayObj[elem]);
+
                         arrayObj[elem] = true;
+                        operatorString += ' = ' + arrayObj[elem] + '; ';
                     }
                     else {
                         arrayObj[elem] = false;
-                        
+                        operatorString += ' = ' + arrayObj[elem] + '; ';
                     }
-                return arrayObj;
+                
                 })
-                return arrayObj;
+
+                return operatorString
         }
         
          let answer = updateElem(activeString, responsiveElems);
-         //console.log(answer);
+         
+        // let string = " "answer
+         console.log(answer);
          return {
             answer
          }
         
      }
      
-updateActiveElem("showIntro");
-
-//console.log(updateActiveElem.responsiveElems);
+updateActiveElem("showMen");

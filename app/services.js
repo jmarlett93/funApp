@@ -29,25 +29,45 @@ angular.module('myOdysseyServices', [])
                     " the respect of the Hellenic world.",
                     "Some brawn always helps. You don't need them but keep them around."
                   ];
+    let arrStrings = ["showIntro", "showHealth", "showResolve", "showArete", "showMen"];
      
-     let responsiveElems = { 
-         "showIntro": true, 
-         "showHealth": false,
-         "showResolve": false,
-         "showArete": false, }
+    function updateActiveElem(activeString){
          
-     function updateActiveElem(activeString){
-        let keysArr = Object.keys(responsiveElems);
-        
-        keysArr.forEach(function(elem){
+         let responsiveElems = { 
+         "showIntro": true, 
+         "showHealth": true,
+         "showResolve": true,
+         "showArete": true,
+         "showMen": true }
+         
+        function updateElem(testString, arrayObj){
+            let keysArr = Object.keys(arrayObj);
+            let operatorString = '';
                 
-            
-        })
+                keysArr.forEach(function(elem){
+                    operatorString += elem;
+                    if( elem === testString){
+
+                        arrayObj[elem] = true;
+                        operatorString += ' = ' + arrayObj[elem] + '; ';
+                    }
+                    else {
+                        arrayObj[elem] = false;
+                        operatorString += ' = ' + arrayObj[elem] + '; ';
+                    }
+                })
+                return operatorString
+        }
+        
+         let answer = updateElem(activeString, responsiveElems);
+
+         return {
+            answer }
      }
                      
    return {
        rules: rules,
-       responsiveElems: responsiveElems,
-       updateActiveElem: updateActiveElem }
+       updateActiveElem: updateActiveElem,
+       arrStrings: arrStrings }
 })
 

@@ -7,7 +7,11 @@ angular.module('myOdysseyControllers', [])
     $scope.resolveMessage = rulesMessagesService.rules[1];
     $scope.areteMessage = rulesMessagesService.rules[2];
     $scope.menMessage = rulesMessagesService.rules[3];
-    $scope.updateMessages = rulesMessagesService.updateActiveElem;
+    $scope.messageTitles = rulesMessagesService.arrStrings;
+    $scope.updateMessages = function(param){
+        rulesMessagesService.updateActiveElem(param);
+    };
+
 })
 
 .controller('aboutController', function($scope){
