@@ -55,7 +55,8 @@ h1, h2 {
 
 .app-header h1{
     margin: 0.25em auto;
-    color: #ffffff; }
+    color: #ffffff;
+    text-shadow: 0px 1px 5px #CB3F23; }
     
 .vertical-flex{
     height: 100%;
@@ -87,21 +88,30 @@ h1, h2 {
     color: #ffffff;
     font-size: 1.3em;
     text-align: center; }
-
-.nav-descriptor{
-    margin: 1em auto 0 auto;
-    width: 90%;
-    background-color: #C04F1F;
-    color: #ffffff;
-    border-radius: 0.35em;
-    padding: 0.5em;
-    text-align: center; }
-
-.nav-descriptor h2 {
-    font-size: 1.3em; }
     
-.nav-descriptor p {
-    font-size: 1em; }
+.black-rounded{
+    padding: 0.5em;
+    background-color: rgba(0,0,0, 0.85);
+    border-radius: 0.35em; }
+    
+.red-rounded {
+    padding: 0.5em;
+    /*background-color: #F3A04D;*/
+    background-color: rgba(203,63,35, 0.85);
+    border-radius: 0.35em; }
+
+.orange-rounded{
+    padding: 0.5em;
+    /*background-color: #CB3F23;*/
+    background-color: rgba(243,160,77, 0.85);
+    border-radius: 0.35em; }
+
+.plus-font-size{
+    font-size: 1.1em; }
+
+.space-around{
+    margin: 0.5em;
+}
 
 .text-container{
     position: relative;
@@ -140,17 +150,23 @@ h1, h2 {
 
 .text-container > p {
     z-index: 1;
-    font-size: 1em;
+    font-size: 1.1em;
     padding: 0.5em;
     border-top: 1px solid #ffffff; }
-    
+
+.text-container > div, a {
+    z-index: 2; }
+
+.view-shell{
+    z-index:2; }
+       
 .statistic-container {
     margin: auto auto 0 auto;
     width: 90%;
     padding: 0.5em;
     border-radius: 0.35em;
     color: #ffffff;
-    background-color: #C04F1F; }
+    background-color: #CB3F23; }
     
 .stat-display {
     margin: auto;
@@ -158,7 +174,7 @@ h1, h2 {
     width: 21%;
     height: 2.4em;
     background-color: #EEE1D7;
-    color:#C04F1F;
+    color:#000000;
     border-radius: 0.35em;
     text-align: center; }
 

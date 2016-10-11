@@ -1,7 +1,12 @@
 <section class="vertical-flex">
     
-    <div class="nav-descriptor">
-        <h2 ng-click="updateMessages('messageTitles[0]')" ng-init="showIntro = true">Intro</h2>
+ <!--    <div ng-repeat="message in messages" class="text-container">
+        <h2 ng-click="showIntro = message.logic[0]; showResolve = message.logic[1] ; showHealth = false  ; showArete = false; showMen = false">{{message.name}}</h2>
+        <p ng-show="showHealth">{{message.message}}</p>
+    </div>  -->
+
+    <div class="text-container">
+        <h2 ng-click="showIntro = messages[0].logic[0]; showResolve = false ; showHealth = false  ; showArete = false; showMen = false" ng-init="showIntro = true">Intro</h2>
         <p ng-show="showIntro">Welcome to the Odyssey App. While navigating Odysseus homeward, watch your resources displayed at
         the bottom of the screen. If you are running low choose carefully to survive.</p>
     </div>

@@ -17,18 +17,51 @@ angular.module('myOdysseyServices', [])
 
 .factory('rulesMessagesService', function(){
     
-    let rules = [ "If you run out of health, you die." +
-                   " Gain health by doing something restful or" +
-                    " avoiding conflict for a round to recharge",
-                    "Odysseus's will power to return" +
-                    " home. Comforts, a goddess's" +
-                    " spell or military diversions, might cause him" +
-                    " to forsake the journey.",
-                    "A distinctly Greek sense of heroic excellence." +
-                    " Losing Arete will not kill you outright, but you will disastrously lose"+
-                    " the respect of the Hellenic world.",
-                    "Some brawn always helps. You don't need them but keep them around."
+    let rulesArr = [
+        
+                    {
+                        name: "intro",
+                        operator: "showIntro",
+                        logic: "",
+                        message: "Welcome to the Odyssey App. While navigating Odysseus homeward, " +
+                        "watch your resources displayed at the bottom of the screen. If you are running " +
+                        "low choose carefully to survive."
+                    },
+                    {   
+                        name: "health",
+                        operator: "showHealth",
+                        logic: "",      
+                        message: "If you run out of health, you die." +
+                             " Gain health by doing something restful or" +
+                             " avoiding conflict for a round to recharge" },
+                    {   
+                        name: "resolve",
+                        operator: "showResolve",
+                        logic: "",
+                        message: "Odysseus's will power to return" +
+                        " home. Comforts, a goddess's" +
+                        " spell or military diversions, might cause him" +
+                        " to forsake the journey."},
+                    {   
+                        name: "arete",
+                        operator: "showArete",
+                        logic: "",
+                        message: "A distinctly Greek sense of heroic excellence." +
+                        " Losing Arete will not kill you outright, but you will disastrously lose"+
+                        " the respect of the Hellenic world."},
+                    {   
+                        name: "men",
+                        operator: "showMen",
+                        logic: "",
+                        message: "Some brawn always helps. You don't need them but keep them around."}
                   ];
+    
+    rulesArr.forEach(function(obj){
+        obj.logic = updateActiveElem(obj.operator).answer;
+        //console.log(obj);
+        return obj;
+    });
+    
     let arrStrings = ["showIntro", "showHealth", "showResolve", "showArete", "showMen"];
      
     function updateActiveElem(activeString){
@@ -42,33 +75,38 @@ angular.module('myOdysseyServices', [])
          
         function updateElem(testString, arrayObj){
             let keysArr = Object.keys(arrayObj);
-            let operatorString = '';
+            let operatorArr = [];
                 
                 keysArr.forEach(function(elem){
-                    operatorString += elem;
+                   
                     if( elem === testString){
 
                         arrayObj[elem] = true;
-                        operatorString += ' = ' + arrayObj[elem] + '; ';
+                        operatorArr.push( arrayObj[elem] );
                     }
                     else {
                         arrayObj[elem] = false;
-                        operatorString += ' = ' + arrayObj[elem] + '; ';
+                        operatorArr.push( arrayObj[elem]);
                     }
                 })
-                return operatorString
+                 console.log(operatorArr);
+                return operatorArr;
+               
         }
-        
-         let answer = updateElem(activeString, responsiveElems);
-
+        let answer = updateElem(activeString, responsiveElems); 
          return {
-            answer }
+           answer }
      }
                      
    return {
-       rules: rules,
+       rulesArr: rulesArr,
        updateActiveElem: updateActiveElem,
        arrStrings: arrStrings }
+})
+
+.factory('storyService', function(){
+    
+    
 })
 
 .factory('imgViewService', function(){
@@ -95,13 +133,17 @@ angular.module('myOdysseyServices', [])
         
         {
             id: 0,
+            name: "Trojan Beach",
+            action: "Boredom",
             options: { 
                 0: "Stay on the Beach at Troy",
-                1: "Set Sail for Home by the Shore",
+                1: "Set Sail for the Cicones by the Shore",
                 2: "Set Sail for Home offshore" }
         },
         {
             id: 1,
+            name: "Land of Cicones",
+            action: "Raid the Chicones",
             options: {
                 
             }

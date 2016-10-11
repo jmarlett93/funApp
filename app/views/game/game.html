@@ -9,9 +9,22 @@
                     <img class="game-view-image" ng-src="/img/{{image.image}}"/>
             </div>
         </div>
-        <ui-view></ui-view>
-        <h2>Odysseus is on the beaches of Troy</h2>
-        <a class="nav-view" ui-sref="game.t1"> go</a>
+        <ui-view class="view-shell"></ui-view>
+        <div ng-hide="hidePreview" class="vertical-flex">
+            <h2 class="black-rounded" ng-hide="showSummary">Would you like to read the background summary before you begin?</h2>
+                <div class="horizontal-flex" ng-hide="showSummary">
+                    <a class="nav-view" ng-click="showSummary = true ;">Yes</a>
+                    <a class="nav-view" ui-sref="game.t1" ng-click="hidePreview = true;">No</a>
+                </div>
+                <div class="vertical-flex" ng-show="showSummary">
+                    <p class="red-rounded plus-font-size space-around">
+                        After 10 years sieging Troy, Odysseus and the victorious Greeks began their journeys
+                        home. Odysseus, whose cunning helped win the Trojan War, 
+                    </p>
+                    
+                    <a class="nav-view" ui-sref="game.t1" ng-click="hidePreview = true;"> Done</a>
+                </div>
+        </div>
     </div>
 
     <div class="statistic-container horizontal-flex">
