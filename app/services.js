@@ -71,3 +71,51 @@ angular.module('myOdysseyServices', [])
        arrStrings: arrStrings }
 })
 
+.factory('imgViewService', function(){
+    let imgArr = [
+        {
+          name: "view-0",
+          image: 'part-0.PNG' },
+        {
+         name: "view-1",
+         image: 'view-1.PNG' },
+        {
+         name: "view-2",
+         image: 'view-2.PNG'
+        }];
+        
+        return {
+            imgArr: imgArr
+        }
+})
+
+.factory('gameChoiceService', function(){
+    
+    let viewOptionsArr = [
+        
+        {
+            id: 0,
+            options: { 
+                0: "Stay on the Beach at Troy",
+                1: "Set Sail for Home by the Shore",
+                2: "Set Sail for Home offshore" }
+        },
+        {
+            id: 1,
+            options: {
+                
+            }
+            
+        },
+        {
+            
+        }
+        
+    ];
+    
+    return {
+        viewOptionsArr : viewOptionsArr
+    }
+    
+})
+

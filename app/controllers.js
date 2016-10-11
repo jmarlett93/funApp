@@ -18,7 +18,8 @@ angular.module('myOdysseyControllers', [])
     
 })
 
-.controller('gameController', function($scope, heroBuilderService){
+.controller('gameController', function($scope, heroBuilderService, imgViewService){
    $scope.heroStats = heroBuilderService.hero;
+   $scope.gameImages = imgViewService.imgArr;
    
 })

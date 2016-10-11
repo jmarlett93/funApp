@@ -1,0 +1,24 @@
+<section class="vertical-flex">
+
+    <div class="text-container game-view-container vertical-flex">
+        
+        <div ng-repeat="image in gameImages">
+            <div ng-if="image.name === 'view-0'">
+                <span class="tint">
+                </span>
+                    <img class="game-view-image" ng-src="/img/{{image.image}}"/>
+            </div>
+        </div>
+        <ui-view></ui-view>
+        <h2>Odysseus is on the beaches of Troy</h2>
+        <a class="nav-view" ui-sref="game.t1"> go</a>
+    </div>
+
+    <div class="statistic-container horizontal-flex">
+        <div ng-repeat="(key, value) in heroStats" class="stat-display">
+            {{value}}
+            <h3>{{key}}</h3>   
+        </div>
+    </div>
+    
+</section>

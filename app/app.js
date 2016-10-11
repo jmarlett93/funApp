@@ -7,22 +7,28 @@ angular.module('myOdysseyApp', [ 'ui.router', 'myOdysseyControllers', 'myOdyssey
     $stateProvider
         .state('home', {
             url: '/home',
-            templateUrl: 'home/home.html',
+            templateUrl: 'views/home/home.html',
             controller: 'homeController',
             controllerAs: 'homeCtrl'
             })
             
          .state('about', {
              url: '/about',
-             templateUrl: 'about/about.html',
+             templateUrl: 'views/about/about.html',
              controller: 'aboutController',
              controllerAs: 'aboutCtrl'
          })
          .state('game', {
              url:'/game',
-             templateUrl: 'game/game.html',
+             templateUrl: 'views/game/game.html',
              controller: 'gameController',
              controllerAs: 'gameCtrl'
+         })
+         .state('game.t1', {
+             url: "/partI",
+             controller: 'gameController',
+             parent: 'game',
+             templateUrl: 'views/game/partI.html'
          })
      })
 
