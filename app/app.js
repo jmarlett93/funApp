@@ -28,9 +28,17 @@ angular.module('myOdysseyApp', [ 'ui.router', 'myOdysseyControllers', 'myOdyssey
              url: "/part-I",
              controller: 'gameController',
              parent: 'game',
-             templateUrl: 'views/game/part.html'
+             templateUrl: 'views/game/part1.html'
          })
-     })
+         .state('game.t2', {
+             url:"/part-II",
+             controller: 'gameController',
+             parent: 'game',
+             templateUrl: 'views/game/part2.html'
+         })
+
+     
+    })
 
 
 
