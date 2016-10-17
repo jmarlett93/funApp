@@ -1,4 +1,4 @@
-'use strict'
+     'use strict'
 
 angular.module('myOdysseyApp', [ 'ui.router', 'myOdysseyControllers', 'myOdysseyServices'])
 
