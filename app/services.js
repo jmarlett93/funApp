@@ -8,7 +8,7 @@ angular.module('myOdysseyServices', [])
         "health": 90,
         "resolve": 100,
         "arete": 80,
-        "men": 200, }
+        "men": 200 }
         
     return {
         hero : heroObject
@@ -58,7 +58,7 @@ angular.module('myOdysseyServices', [])
     
     rulesArr.forEach(function(obj){
         obj.logic = updateActiveElem(obj.operator).answer;
-        //console.log(obj);
+        
         return obj;
     });
     

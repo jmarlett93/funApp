@@ -36,8 +36,13 @@ angular.module('myOdysseyApp', [ 'ui.router', 'myOdysseyControllers', 'myOdyssey
              parent: 'game',
              templateUrl: 'views/game/part2.html'
          })
-
-     
+         .state('game.t3', {
+             url:"/part-III",
+             controller: 'gameController',
+             parent: 'game',
+             templateUrl: 'views/game/part3.html'
+         })
+   
     })
 
 
