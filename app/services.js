@@ -135,15 +135,16 @@ angular.module('myOdysseyServices', [])
             id: 0,
             name: "Trojan Beach",
             action: "Boredom",
-            options: { 
-                0: "Stay on the Beach at Troy",
-                1: "Set Sail for the Cicones by the Shore",
-                2: "Set Sail for Home offshore" }
+            result: "Your men are listless and your resolve crumbles",
+            option0: "Stay on the Beach at Troy",
+            option1: "Set Sail for the Cicones by the Shore",
+            option2: "Set Sail for Home offshore"
         },
         {
             id: 1,
             name: "Land of Cicones",
-            action: "Raid the Chicones",
+            action: "You raid the Chicones", 
+            result: "plunder and your leadership invigorate your men",
             options: {
                 
             }
