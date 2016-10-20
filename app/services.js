@@ -134,22 +134,27 @@ angular.module('myOdysseyServices', [])
         {
             id: 0,
             name: "Trojan Beach",
+            visited: false,
             action: "Boredom",
             result: "Your men are listless and your resolve crumbles",
-            option0: "Stay on the Beach at Troy",
-            option1: "Set Sail for the Cicones by the Shore",
-            option2: "Set Sail for Home offshore"
+            options:    {
+                         option0: "Stay on the Beach at Troy",
+                         option1: "Set Sail for the Cicones by the Shore",
+                         option2: "Set Sail for Home offshore"}
         },
         {
             id: 1,
             name: "Land of Cicones",
+            visited: false,
             action: "You raid the Chicones", 
             result: "plunder and your leadership invigorate your men",
             options: {
+                       options0: "Go back to the Beach of Troy",
+                       option1: "Set sail for Home by the Shore",
+                       option2: "Set sail for Home offshore"},
                 
-            }
+            },
             
-        },
         {
             
         }
