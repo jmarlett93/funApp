@@ -44,6 +44,3 @@ angular.module('myOdysseyApp', [ 'ui.router', 'myOdysseyControllers', 'myOdyssey
          })
    
     })
-
-
-

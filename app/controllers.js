@@ -2,7 +2,7 @@
 
 angular.module('myOdysseyControllers', [])
 
-.controller('homeController', function($scope, rulesMessagesService){
+.controller('homeController', ['$scope', function($scope, rulesMessagesService){
     $scope.messages = rulesMessagesService.rulesArr;
     $scope.introMessage = rulesMessagesService.rulesArr[0].message;
     $scope.healthMessage = rulesMessagesService.rulesArr[1].message;
@@ -13,15 +13,16 @@ angular.module('myOdysseyControllers', [])
     $scope.updateMessages = function(param){
         rulesMessagesService.updateActiveElem(param);
     };
-
-})   
-
-.controller('aboutController', function($scope){
     
-})
 
-.controller('gameController', function($scope, heroBuilderService, imgViewService, gameChoiceService){
+}])
+
+.controller('aboutController',['$scope', function($scope){
+    
+}])
+
+.controller('gameController', ['$scope', function($scope, heroBuilderService, imgViewService, gameChoiceService){
    $scope.heroStats = heroBuilderService.hero;
    $scope.gameImages = imgViewService.imgArr;
    $scope.gamePlaces = gameChoiceService.viewOptionsArr;
-})
+}])
