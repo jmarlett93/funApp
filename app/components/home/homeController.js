@@ -1,6 +1,6 @@
 'use strict'
 
-angular.module('myOdysseyControllers', [])
+angular.module('myOdysseyControllers')
 
 .controller('homeController', ['$scope', function($scope, rulesMessagesService){
     $scope.messages = rulesMessagesService.rulesArr;
@@ -13,16 +13,5 @@ angular.module('myOdysseyControllers', [])
     $scope.updateMessages = function(param){
         rulesMessagesService.updateActiveElem(param);
     };
-    
-
 }])
 
-.controller('aboutController',['$scope', function($scope){
-    
-}])
-
-.controller('gameController', ['$scope', function($scope, heroBuilderService, imgViewService, gameChoiceService){
-   $scope.heroStats = heroBuilderService.hero;
-   $scope.gameImages = imgViewService.imgArr;
-   $scope.gamePlaces = gameChoiceService.viewOptionsArr;
-}])

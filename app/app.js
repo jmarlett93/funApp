@@ -1,5 +1,9 @@
      'use strict'
 
+angular.module('myOdysseyControllers', [])
+
+angular.module('myOdysseyServices', [])
+
 angular.module('myOdysseyApp', [ 'ui.router', 'myOdysseyControllers', 'myOdysseyServices'])
 
 .config(function($stateProvider){
@@ -7,20 +11,20 @@ angular.module('myOdysseyApp', [ 'ui.router', 'myOdysseyControllers', 'myOdyssey
     $stateProvider
         .state('home', {
             url: '/home',
-            templateUrl: 'views/home/home.html',
+            templateUrl: 'components/home/home.html',
             controller: 'homeController',
             controllerAs: 'homeCtrl'
             })
             
          .state('about', {
              url: '/about',
-             templateUrl: 'views/about/about.html',
+             templateUrl: 'components/about/about.html',
              controller: 'aboutController',
              controllerAs: 'aboutCtrl'
          })
          .state('game', {
              url:'/game',
-             templateUrl: 'views/game/game.html',
+             templateUrl: 'components/game/game.html',
              controller: 'gameController',
              controllerAs: 'gameCtrl'
          })
@@ -28,19 +32,19 @@ angular.module('myOdysseyApp', [ 'ui.router', 'myOdysseyControllers', 'myOdyssey
              url: "/part-I",
              controller: 'gameController',
              parent: 'game',
-             templateUrl: 'views/game/part1.html'
+             templateUrl: 'components/part-II/part1.html'
          })
          .state('game.t2', {
              url:"/part-II",
              controller: 'gameController',
              parent: 'game',
-             templateUrl: 'views/game/part2.html'
+             templateUrl: 'components/part-II/part2.html'
          })
          .state('game.t3', {
              url:"/part-III",
              controller: 'gameController',
              parent: 'game',
-             templateUrl: 'views/game/part3.html'
+             templateUrl: 'components/part-III/part3.html'
          })
    
     })
